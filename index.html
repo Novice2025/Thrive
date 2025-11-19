@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THRIVE Pro - The Ultimate Guide to Continuous Thriving (Prosperar/Florescer)</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+        }
+        /* Custom styles for line clamping on the cards */
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header id="app-header" class="bg-blue-800 shadow-xl p-4 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 id="home-link-header" class="text-2xl font-extrabold text-white tracking-widest cursor-pointer hover:text-yellow-400 transition duration-300">
+                THRIVE Pro <span class="text-yellow-400">🚀</span>
+            </h1>
+            <nav class="space-x-4">
+                <button id="home-link-nav" class="text-white font-medium hover:text-yellow-400 transition duration-300 focus:outline-none">
+                    Home / Modules
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="app-content" class="container mx-auto flex-grow p-4 sm:p-6 lg:p-8">
+        <!-- Content will be injected here by JavaScript -->
+        <div class="text-center p-12 text-gray-500">Loading application...</div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-700 p-4 mt-12">
+        <div class="container mx-auto text-center text-white text-sm">
+            (2025 @ THRIVE by Daby)
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. DATA STRUCTURES (Focused on THRIVING and Growth Metrics) ---
+
+        const lessons = [
+            {
+                id: 1,
+                role: 'Tech Developer',
+                level: 'Júnior',
+                title: 'Thriving (Prosperar) through Rapid Learning: The Junior Developer\'s Path',
+                description: 'This module helps new developers **thrive** (**prosperar / florescer**) by focusing on essential skill acquisition and robust feedback loops that accelerate career success, ensuring you **thrive** (**prospere / floresça**) in modern development environments.',
+                kpis: [
+                    { name: 'Thrive Metric: Learning Velocity', description: 'This metric tracks the speed and success rate of integrating new technologies so you can confidently **thrive** (**prosperar**) in your role.' },
+                    { name: 'Thrive Metric: Feedback-to-Growth Loop', description: 'Measures how often you receive and apply constructive feedback to continuously **thrive** (**florescer**) and improve your output.' },
+                    { name: 'Thrive Metric: Maintainable Code Score', description: 'Ensures your code quality allows future developers and yourself to **thrive** (**prosperar**) without being bogged down by legacy burdens.' },
+                ],
+                scenario: {
+                    title: 'From Confusion to Clarity: Ana\'s Framework Challenge to Thrive (Prosperar)',
+                    steps: [
+                        { id: 1, title: 'The Initial Block', content: 'Ana, a developer, initially struggles with a new JavaScript framework, making it difficult to **thrive** (**prosperar**) under pressure and affecting her overall performance.', imageAlt: 'Developer looking stressed' },
+                        { id: 2, title: 'Implementing Structured Learning', content: 'She dedicates focused time to boost her **Learning Velocity** metric, proving she is committed to **thriving** (**florescer**) through structured effort and personal investment.', imageAlt: 'Book and laptop icon' },
+                        { id: 3, title: 'Leveraging Mentorship', content: 'By improving her **Feedback-to-Growth Loop** with a senior mentor, Ana gains actionable insights, helping her **thrive** (**prosperar**) by minimizing costly technical errors.', imageAlt: 'Two people talking constructively' },
+                        { id: 4, title: 'Sustainable Thriving', content: 'Ana now masters the framework, demonstrating that continuous, structured learning is the most effective key to **thriving** (**prosperar / florescer**) consistently in the competitive tech world.', imageAlt: 'Graph showing rapid improvement' },
+                    ],
+                },
+                exercise: [
+                    {
+                        id: 1,
+                        text: "Which metric best measures long-term professional adaptability, allowing you to continuously **thrive** (**prosperar**)?",
+                        options: ["Lines of Code Written (Volume)", "Project Budget Adherence (Compliance)", "Thrive Metric: Learning Velocity (Adaptability)", "Number of Meetings Attended (Activity)"],
+                        correctAnswerIndex: 2,
+                        explanation: "The **Learning Velocity** is the most crucial metric for **thriving** (**prosperar**) because it measures your ability to adapt; professionals who genuinely **thrive** (**florescem**) prioritize the continuous absorption and application of new knowledge, ensuring future success.",
+                    },
+                ],
+            },
+            {
+                id: 2,
+                role: 'Remote Professional',
+                level: 'Sênior',
+                title: 'Sustainably Thriving (Prosperar): The Balance of Output and Recharge',
+                description: 'Learn how to **thrive** (**florescer**) remotely by mastering the critical balance between high-quality **focused output** and dedicated time for mental **recharge**, which helps you **thrive** (**prosperar**) without burnout.',
+                kpis: [
+                    { name: 'Thrive Metric: Focused Output Score', description: 'Measures time spent in uninterrupted, high-value tasks, allowing you to truly **thrive** (**prosperar**) on the most important projects.' },
+                    { name: 'Thrive Metric: Mental Recharge Index', description: 'Tracks time disconnected from work devices (screens, notifications) to ensure your mental resilience allows you to keep **thriving** (**florescendo**) long-term.' },
+                ],
+                scenario: {
+                    title: 'Ricardo\'s Strategy: A Plan to Prevent Burnout and Thrive (Florescer)',
+                    steps: [
+                        { id: 1, title: 'The Burnout Alert', content: 'Ricardo feels stressed and unproductive despite working hard, showing he is failing to **thrive** (**prosperar**); his low **Recharge Index** signals an urgent need for balance.', imageAlt: 'Alarm clock symbol' },
+                        { id: 2, title: 'Implementing Focus Blocks', content: 'He introduces 4-hour blocks of **Deep Work** to drastically improve his **Focused Output Score**, which ensures the quality of his work lets him **thrive** (**florescer**) efficiently.', imageAlt: 'Clock measuring focused time' },
+                        { id: 3, title: 'Mandating the Recharge', content: 'By prioritizing his **Mental Recharge Index** with mandatory breaks, Ricardo effectively protects his energy, enabling him to **thrive** (**prosperar**) without sacrificing wellness.', imageAlt: 'Person meditating or walking' },
+                        { id: 4, title: 'Thriving with Balance', content: 'Ricardo successfully optimizes both input and recovery, demonstrating the clear, sustainable path that all **thriving** (**prósperos**) professionals must follow to maintain peak performance.', imageAlt: 'Waiver graphic showing balance' },
+                    ],
+                },
+                exercise: [
+                    {
+                        id: 1,
+                        text: "Why is 'Thrive Metric: Focused Output Score' more critical for **thriving** (**prosperar**) than simply 'Hours Worked'?",
+                        options: ["It proves physical presence at the desk (Visibility)", "It measures focus and quality output, not just time spent (Effectiveness)", "It is easier to automate than other metrics (Technology)", "It guarantees employee loyalty and commitment (Culture)"],
+                        correctAnswerIndex: 1,
+                        explanation: "The **Focused Output Score** is paramount because **thriving** (**florescer**) means prioritizing the quality and concentration of results over mere time spent; professionals who **thrive** (**prosperam**) produce valuable results consistently in focused, efficient blocks.",
+                    },
+                ],
+            },
+            {
+                id: 3,
+                role: 'Team Lead',
+                level: 'Gerente',
+                title: 'Leading Teams That Thrive (Prosperam): Culture and Predictability',
+                description: 'This module teaches you to focus on building a resilient and engaged team culture, ensuring the collective can **thrive** (**florescer**) together through any challenge or project change.',
+                kpis: [
+                    { name: 'Thrive Metric: Team Vibrancy Score', description: 'Measures how engaged and motivated the team feels, directly reflecting their collective ability to **thrive** (**prosperar**) and succeed.' },
+                    { name: 'Thrive Metric: Predictable Velocity', description: 'Tracks the consistency of feature delivery, a key indicator that the team is organized and stable enough to **thrive** (**florescer**) predictably.' },
+                ],
+                scenario: {
+                    title: 'Julia\'s Mission: Building a Resilient Team That Will Thrive (Prosperar)',
+                    steps: [
+                        { id: 1, title: 'Volatility and Disconnection', content: 'Julia\'s new team has unstable delivery and low morale, clearly indicating the current culture is not configured to let the individuals **thrive** (**prosperar**).', imageAlt: 'Volatile stock chart' },
+                        { id: 2, title: 'Targeting Engagement First', content: 'She focuses on boosting the **Team Vibrancy Score** through dedicated 1:1s, which is a crucial first step toward creating a healthy space where people can fully **thrive** (**florescer**).', imageAlt: 'Happy team celebrating' },
+                        { id: 3, title: 'Impact on Velocity', content: 'As engagement improves, cooperation flourishes, smoothing out the **Predictable Velocity** metric, proving the team is collectively learning to **thrive** (**prosperar**) better.', imageAlt: 'Stable project velocity graph' },
+                        { id: 4, title: 'A Thriving Ecosystem', content: 'Julia establishes a resilient, self-organizing ecosystem, confirming that a strong, vibrant culture is the indispensable bedrock for any successful team to consistently **thrive** (**prosperar / florescer**).', imageAlt: 'Building blocks symbolizing a strong foundation' },
+                    ],
+                },
+                exercise: [
+                    {
+                        id: 1,
+                        text: "How does high 'Thrive Metric: Team Vibrancy Score' primarily impact 'Predictable Velocity'?",
+                        options: ["It allows the manager to take more vacations (Benefit)", "It guarantees zero project bugs (Unrealistic)", "It increases stability and predictability due to better cooperation (Mechanism)", "It allows the team to skip documentation (Mistake)"],
+                        correctAnswerIndex: 2,
+                        explanation: "High **Team Vibrancy** directly leads to better cooperation and trust, which is the mechanism necessary for a team to **thrive** (**prosperar**) collectively; this fundamental improvement results in highly stable and **predictable velocity** for the entire team.",
+                    },
+                ],
+            },
+            {
+                id: 4,
+                role: 'Startup Founder',
+                level: 'Executivo',
+                title: 'Organizational Thriving (Prosperar/Florescer): Scaling Resilience',
+                description: 'This strategic module focuses on building the foundational resilience and adaptability necessary for a company to **thrive** (**prosperar**) sustainably, ensuring the organization can **thrive** (**florescer**) despite market volatility.',
+                kpis: [
+                    { name: 'Thrive Metric: Market Adaptation Rate', description: 'This metric tracks how quickly and effectively the company pivots or adjusts its offering in response to market shifts, ensuring it can always **thrive** (**prosperar**).' },
+                    { name: 'Thrive Metric: Cultural Health Index', description: 'Measures the stability and positive engagement of the entire workforce, which is the internal engine required for the company to **thrive** (**florescer**) collectively.' },
+                ],
+                scenario: {
+                    title: 'The Pivot to Prosperity: Maria\'s Strategic Challenge to Thrive (Florescer)',
+                    steps: [
+                        { id: 1, title: 'Initial Market Challenge', content: 'Maria’s company faces a sudden drop in demand for its core product, revealing a critical need to adapt quickly if the business is to **thrive** (**prosperar**).', imageAlt: 'Stock chart downturn' },
+                        { id: 2, title: 'Activating Adaptation', content: 'She implements a rapid feedback loop to dramatically increase the **Market Adaptation Rate**, proving the company can quickly reconfigure its strategy to **thrive** (**florescer**) in new conditions.', imageAlt: 'Team collaborating on a whiteboard' },
+                        { id: 3, title: 'Stabilizing the Core Culture', content: 'Simultaneously, Maria actively protects the **Cultural Health Index** by maintaining transparency and communication, ensuring employees feel safe enough to help the company **thrive** (**prosperar**).', imageAlt: 'Shield symbol protecting values' },
+                        { id: 4, title: 'Sustained Organizational Thriving', content: 'The company successfully navigates the market shift and emerges stronger, demonstrating that proactive resilience is the critical factor that allows a modern organization to truly **thrive** (**florescer**) long-term.', imageAlt: 'Waiver graphic showing stable growth' },
+                    ],
+                },
+                exercise: [
+                    {
+                        id: 1,
+                        text: "For a company, which activity is most directly correlated with the ability to **thrive** (**prosperar**) over the long haul?",
+                        options: ["Cutting marketing budget during downturns (Short-term savings)", "Investing heavily in non-core administrative overhead (Complexity)", "Continuously refining the 'Market Adaptation Rate' (Resilience)", "Increasing the length of employee meetings (Activity)"],
+                        correctAnswerIndex: 2,
+                        explanation: "The most crucial factor for a company to **thrive** (**florescer**) is **Resilience**—the capacity to pivot and adapt. Continuously refining the **Market Adaptation Rate** ensures the organization remains responsive, guaranteeing its ability to **thrive** (**prosperar**) regardless of external challenges.",
+                    },
+                ],
+            },
+        ];
+
+        // --- 2. GLOBAL STATE AND NAVIGATION ---
+        const AppState = {
+            currentPageId: null, // null for Home, ID for Lesson Detail
+            scenarioSteps: {} // Stores the current step for each lesson ID
+        };
+
+        const appContent = document.getElementById('app-content');
+
+        /**
+         * Renders the entire application based on the current state.
+         * @param {number|null} id - The ID of the lesson to navigate to, or null for home.
+         */
+        const navigateTo = (id) => {
+            AppState.currentPageId = id;
+            window.scrollTo(0, 0);
+
+            if (id === null) {
+                renderHome();
+            } else {
+                const lesson = lessons.find(l => l.id === id);
+                if (lesson) {
+                    renderLessonDetail(lesson);
+                } else {
+                    appContent.innerHTML = `<div class="text-center p-12 text-red-500 text-xl">Module not found.</div>`;
+                }
+            }
+        };
+
+        // --- 3. RENDERING FUNCTIONS ---
+
+        /**
+         * Renders the Home View (list of lessons).
+         */
+        const renderHome = () => {
+            const lessonCards = lessons.map(lesson => {
+                let levelClasses = '';
+                if (lesson.level === 'Executivo') {
+                    levelClasses = 'bg-red-100 text-red-800 border-red-500';
+                } else if (lesson.level === 'Gerente') {
+                    levelClasses = 'bg-indigo-100 text-indigo-800 border-indigo-500';
+                } else if (lesson.level === 'Sênior') {
+                    levelClasses = 'bg-green-100 text-green-800 border-green-500';
+                } else {
+                    levelClasses = 'bg-yellow-100 text-yellow-800 border-yellow-500';
+                }
+
+                return `
+                    <div data-id="${lesson.id}" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border-t-4 ${levelClasses} cursor-pointer lesson-card">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">${lesson.role}</h3>
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full shadow-sm ${levelClasses.replace('border-', 'bg-').replace('100', '200')}" style="color: ${levelClasses.match(/text-([a-z]+-\d+)/)[0]}">
+                                ${lesson.level}
+                            </span>
+                        </div>
+                        <h4 class="text-lg font-medium text-blue-600 mb-3">${lesson.title}</h4>
+                        <p class="text-sm text-gray-600 mb-4 line-clamp-3">${lesson.description}</p>
+                        <div class="text-xs font-semibold text-green-600 flex items-center">
+                            Start Module to Thrive (Prosperar) &rarr;
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            appContent.innerHTML = `
+                <div class="space-y-8">
+                    <header class="text-center py-8 bg-blue-50 rounded-xl shadow-md border-b-4 border-blue-200">
+                        <h2 class="text-4xl font-black text-blue-800 mb-2">
+                            THRIVE Pro: The Ultimate Guide to Thriving (Prosperar)
+                        </h2>
+                        <p class="text-xl text-gray-600">
+                            Select a professional or personal role to start your journey toward **thriving** (**florescer**) and achieving sustainable success.
+                        </p>
+                    </header>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        ${lessonCards}
+                    </div>
+                </div>
+            `;
+
+            // Attach event listeners to the new cards
+            document.querySelectorAll('.lesson-card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    const id = parseInt(card.getAttribute('data-id'));
+                    navigateTo(id);
+                });
+            });
+        };
+
+        /**
+         * Renders the Lesson Detail View.
+         * @param {object} lesson
+         */
+        const renderLessonDetail = (lesson) => {
+            const kpiList = lesson.kpis.map((kpi, index) => `
+                <div key="${index}" class="p-4 border border-gray-100 rounded-lg bg-white shadow-sm">
+                    <p class="font-semibold text-lg text-gray-900 flex items-center">
+                        <span class="text-red-500 mr-2 text-2xl">⚡</span> ${kpi.name}
+                    </p>
+                    <p class="text-sm text-gray-600 mt-1">${kpi.description}</p>
+                </div>
+            `).join('');
+
+            appContent.innerHTML = `
+                <div class="space-y-10">
+                    <button id="back-to-list-btn" class="text-blue-600 hover:text-blue-800 transition duration-200 flex items-center mb-6">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                        Back to Modules
+                    </button>
+                    
+                    <header class="text-center py-6 bg-indigo-600 text-white rounded-xl shadow-xl">
+                        <p class="text-sm font-light uppercase opacity-80">${lesson.role} | Level ${lesson.level}</p>
+                        <h2 class="text-3xl font-black mt-1 mb-2">${lesson.title}</h2>
+                        <p class="text-lg font-medium opacity-90 mx-auto max-w-3xl">
+                            ${lesson.description}
+                        </p>
+                    </header>
+
+                    <!-- Section 1: Growth Metrics (KPIs) -->
+                    <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-red-500">
+                        <h3 class="text-2xl font-bold text-red-700 mb-4">Core Metrics for Thriving (Prosperar)</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            ${kpiList}
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Scenario Walkthrough (The THRIVE Walk-through) -->
+                    <div id="scenario-container"></div>
+
+                    <!-- Section 3: Interactive Exercise -->
+                    <div id="exercise-container"></div>
+                </div>
+            `;
+
+            document.getElementById('back-to-list-btn').addEventListener('click', () => navigateTo(null));
+
+            renderScenarioStepper(lesson);
+            renderExercise(lesson);
+        };
+
+        /**
+         * Renders the Scenario Stepper component.
+         * @param {object} lesson
+         */
+        const renderScenarioStepper = (lesson) => {
+            const container = document.getElementById('scenario-container');
+            const lessonId = lesson.id;
+            
+            // Initialize current step for the lesson if not exists
+            if (AppState.scenarioSteps[lessonId] === undefined) {
+                AppState.scenarioSteps[lessonId] = 0;
+            }
+            let currentStep = AppState.scenarioSteps[lessonId];
+            const totalSteps = lesson.scenario.steps.length;
+            const currentStepData = lesson.scenario.steps[currentStep];
+            const progress = ((currentStep + 1) / totalSteps) * 100;
+
+            container.innerHTML = `
+                <div class="bg-white p-6 rounded-xl shadow-xl border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-4 text-green-700">THRIVE Walk-through: ${lesson.scenario.title}</h3>
+                    <p class="text-sm text-gray-500 italic mb-4">A step-by-step guide to applying growth principles so you can **thrive** (**prosperar / florescer**).</p>
+                    
+                    <!-- Progress Bar -->
+                    <div class="mb-6">
+                        <div class="h-2 bg-gray-200 rounded-full">
+                            <div 
+                                class="h-2 bg-yellow-500 rounded-full transition-all duration-500"
+                                style="width: ${progress}%"
+                            ></div>
+                        </div>
+                        <p class="text-right text-sm text-gray-600 mt-1">Step ${currentStep + 1} of ${totalSteps}</p>
+                    </div>
+                    
+                    <!-- Step Content -->
+                    <div class="p-4 bg-green-50 border-l-4 border-green-500 rounded-lg mb-6">
+                        <h4 class="text-xl font-bold mb-3 text-green-700">${currentStepData.title}</h4>
+                        <p class="text-gray-700 whitespace-pre-line leading-relaxed">${currentStepData.content}</p>
+                    </div>
+                    
+                    <!-- Navigation Buttons -->
+                    <div class="flex justify-between">
+                        <button id="prev-step-btn" 
+                            class="px-4 py-2 rounded-full font-medium transition duration-300 shadow-md text-sm
+                            ${currentStep === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-blue-600 text-white hover:bg-blue-700'}"
+                            ${currentStep === 0 ? 'disabled' : ''}>
+                            &larr; Previous Step
+                        </button>
+                        <button id="next-step-btn" 
+                            class="px-4 py-2 rounded-full font-medium transition duration-300 shadow-md text-sm
+                            ${currentStep === totalSteps - 1 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-red-600 text-white hover:bg-red-700'}"
+                            ${currentStep === totalSteps - 1 ? 'disabled' : ''}>
+                            ${currentStep === totalSteps - 1 ? 'Walk-through Complete! You are Thriving (Florescendo)!' : 'Next Step \u2192'}
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            // Attach event listeners
+            document.getElementById('prev-step-btn').addEventListener('click', () => {
+                AppState.scenarioSteps[lessonId] = Math.max(currentStep - 1, 0);
+                renderScenarioStepper(lesson);
+            });
+            document.getElementById('next-step-btn').addEventListener('click', () => {
+                AppState.scenarioSteps[lessonId] = Math.min(currentStep + 1, totalSteps - 1);
+                renderScenarioStepper(lesson);
+            });
+        };
+
+
+        /**
+         * Renders the Interactive Exercise component.
+         * @param {object} lesson
+         */
+        const renderExercise = (lesson) => {
+            const container = document.getElementById('exercise-container');
+            const lessonId = lesson.id;
+            const questions = lesson.exercise;
+
+            // Initialize exercise state for the lesson if not exists
+            if (!AppState.exerciseState) AppState.exerciseState = {};
+            if (!AppState.exerciseState[lessonId]) {
+                AppState.exerciseState[lessonId] = {
+                    selectedAnswers: Array(questions.length).fill(null),
+                    submitted: false
+                };
+            }
+
+            let state = AppState.exerciseState[lessonId];
+            const score = questions.filter((q, i) => state.selectedAnswers[i] === q.correctAnswerIndex).length;
+            const isComplete = state.selectedAnswers.every(a => a !== null);
+            
+            const handleSelect = (qIndex, aIndex) => {
+                if (state.submitted) return;
+                state.selectedAnswers[qIndex] = aIndex;
+                renderExercise(lesson); // Re-render to show selection
+            };
+
+            const handleSubmit = () => {
+                state.submitted = true;
+                renderExercise(lesson); // Re-render to show results
+                document.getElementById('exercise-results')?.scrollIntoView({ behavior: 'smooth' });
+            };
+
+            const handleReset = () => {
+                state.submitted = false;
+                state.selectedAnswers = Array(questions.length).fill(null);
+                renderExercise(lesson); // Re-render to reset quiz
+            };
+
+            const scoreDisplay = state.submitted ? `
+                <div id="exercise-results" class="p-4 mb-6 bg-blue-100 border-l-4 border-blue-500 text-blue-700 font-bold text-lg rounded-md">
+                    Your Result: ${score} out of ${questions.length} (${((score / questions.length) * 100).toFixed(0)}%) - Keep thriving (prosperando)!
+                </div>
+            ` : '';
+
+            const questionMarkup = questions.map((q, qIndex) => {
+                const optionsMarkup = q.options.map((option, aIndex) => {
+                    let optionClasses = '';
+                    let prefix = '';
+                    const isSelected = state.selectedAnswers[qIndex] === aIndex;
+                    const isCorrect = q.correctAnswerIndex === aIndex;
+                    
+                    if (!state.submitted) {
+                        // Not submitted: show hover/selected state
+                        optionClasses = isSelected ? 'bg-indigo-200 border-indigo-500 cursor-pointer' : 'hover:bg-gray-50 cursor-pointer';
+                    } else {
+                        // Submitted: show result state
+                        if (isCorrect) {
+                            optionClasses = 'bg-green-100 border-green-500 font-bold';
+                            prefix = '✅ ';
+                        } else if (isSelected) {
+                            optionClasses = 'bg-red-100 border-red-500 font-bold opacity-70';
+                            prefix = '❌ ';
+                        } else {
+                            optionClasses = 'bg-gray-100 opacity-50';
+                        }
+                    }
+
+                    return `
+                        <div 
+                            class="p-3 border rounded-lg transition duration-200 text-sm option-select ${optionClasses}"
+                            data-qindex="${qIndex}" 
+                            data-aindex="${aIndex}"
+                            ${state.submitted ? 'style="pointer-events: none;"' : ''}
+                        >
+                            ${prefix}${option}
+                        </div>
+                    `;
+                }).join('');
+
+                const explanationMarkup = state.submitted ? `
+                    <div class="mt-3 text-sm p-3 bg-gray-50 border-l-2 border-gray-300 rounded-br-lg rounded-bl-lg">
+                        <p class="font-bold text-green-700">Thrive Explanation (Explicação sobre Prosperar):</p>
+                        <p class="text-gray-600">${q.explanation}</p>
+                    </div>
+                ` : '';
+
+                return `
+                    <div class="mb-8 p-4 border border-gray-200 rounded-lg bg-white shadow-sm">
+                        <p class="font-semibold mb-3 text-lg text-gray-800">
+                            ${qIndex + 1}. ${q.text}
+                        </p>
+                        <div class="space-y-2">
+                            ${optionsMarkup}
+                        </div>
+                        ${explanationMarkup}
+                    </div>
+                `;
+            }).join('');
+            
+            const buttonMarkup = !state.submitted ? `
+                <button
+                    id="submit-quiz-btn"
+                    class="w-full bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-700 transition duration-300 ${!isComplete ? 'disabled:bg-gray-400 disabled:cursor-not-allowed' : 'shadow-md'}"
+                    ${!isComplete ? 'disabled' : ''}
+                >
+                    Test Your Knowledge to Thrive (Prosperar)
+                </button>
+            ` : `
+                <button
+                    id="reset-quiz-btn"
+                    class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md"
+                >
+                    Reset Quiz and Re-Thrive (Re-Florescer)
+                </button>
+            `;
+
+
+            container.innerHTML = `
+                <div class="mt-8 p-6 bg-yellow-50 rounded-xl shadow-lg border-t-4 border-yellow-500">
+                    <h3 class="text-3xl font-extrabold text-indigo-700 mb-6 border-b pb-2">
+                        Measure Your Growth to Thrive (Prosperar) 🧠
+                    </h3>
+                    ${scoreDisplay}
+                    ${questionMarkup}
+                    ${buttonMarkup}
+                </div>
+            `;
+
+            // Attach event listeners for selection
+            document.querySelectorAll('.option-select').forEach(optionDiv => {
+                optionDiv.addEventListener('click', (e) => {
+                    const qIndex = parseInt(optionDiv.getAttribute('data-qindex'));
+                    const aIndex = parseInt(optionDiv.getAttribute('data-aindex'));
+                    handleSelect(qIndex, aIndex);
+                });
+            });
+
+            // Attach event listeners for submit/reset
+            if (document.getElementById('submit-quiz-btn')) {
+                document.getElementById('submit-quiz-btn').addEventListener('click', handleSubmit);
+            }
+            if (document.getElementById('reset-quiz-btn')) {
+                document.getElementById('reset-quiz-btn').addEventListener('click', handleReset);
+            }
+        };
+
+
+        // --- 4. INITIALIZATION ---
+
+        window.onload = () => {
+            // Set up universal navigation listeners
+            document.getElementById('home-link-header').addEventListener('click', () => navigateTo(null));
+            document.getElementById('home-link-nav').addEventListener('click', () => navigateTo(null));
+            
+            // Start the application on the home view
+            navigateTo(null);
+        };
+    </script>
+</body>
+</html>
